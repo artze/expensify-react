@@ -7,7 +7,7 @@
   "scripts": {
     "serve": "live-server public/",
     "build:dev": "webpack",
-    "build:prod": "NODE_ENV=production CONFIG_PATH=/var/config/expensify/.env.production webpack -p",
+    "build:prod": "NODE_ENV=production CONFIG_PATH=/var/config/expensify/.env.production PUBLIC_URL=https://artze.xyz/expensify webpack -p",
     "dev": "webpack-dev-server",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.json"
   },

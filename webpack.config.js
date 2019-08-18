@@ -67,7 +67,8 @@ module.exports = () => {
                 'process.env.FIREBASE_PROJECT_ID': JSON.stringify(process.env.FIREBASE_PROJECT_ID),
                 'process.env.FIREBASE_STORAGE_BUCKET': JSON.stringify(process.env.FIREBASE_STORAGE_BUCKET),
                 'process.env.FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER_ID),
-                'process.env.CONFIG_PATH': JSON.stringify(process.env.CONFIG_PATH)
+                'process.env.CONFIG_PATH': JSON.stringify(process.env.CONFIG_PATH),
+                'process.env.PUBLIC_URL': JSON.stringify(process.env.PUBLIC_URL)
             })
         ],
         devtool: isProduction ? 'source-map' : 'inline-source-map',
