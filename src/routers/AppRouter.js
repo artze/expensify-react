@@ -9,7 +9,9 @@ import NotFoundPage from '../components/NotFoundPage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
 
-export const history = createHistory();
+export const history = createHistory({
+    basename: process.env.PUBLIC_URL
+});
 
 const AppRouter = () => (
     <Router history={history}>
