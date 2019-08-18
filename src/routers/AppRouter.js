@@ -12,7 +12,7 @@ import PublicRoute from './PublicRoute';
 export const history = createHistory();
 
 const AppRouter = () => (
-    <Router history={history}>
+    <Router history={history} basename={process.env.NODE_ENV === 'production' ? '/expensify' : '/'}>
         <Switch>
             <PublicRoute path="/" component={LoginPage} exact={true}></PublicRoute>
             <PrivateRoute path="/dashboard" component={ExpenseDashboardPage}></PrivateRoute>
