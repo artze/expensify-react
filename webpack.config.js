@@ -53,7 +53,7 @@ module.exports = () => {
                     loader: 'file-loader',
                     options: {
                         outputPath: 'images',
-                        publicPath: '/dist/images'
+                        publicPath: process.env.PUBLIC_URL ? '/expensify/dist/images' : '/dist/images'
                     }
                 }
             ]
