@@ -47,6 +47,14 @@ module.exports = () => {
                             }
                         ]
                     })
+                },
+                {
+                    test: /\.(gif|jpe?g|png)$/,
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: 'images',
+                        publicPath: 'dist/images'
+                    }
                 }
             ]
         },
