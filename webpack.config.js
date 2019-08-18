@@ -8,6 +8,8 @@ if(process.env.NODE_ENV === 'test') {
     require('dotenv').config({ path: '.env.test' })
 } else if(process.env.NODE_ENV === 'development') {
     require('dotenv').config({ path: '.env.development' })
+} else if(process.env.NODE_ENV === 'production') {
+    require('dotenv').config({ path: process.env.CONFIG_PATH })
 }
 
 module.exports = (env) => {
@@ -57,6 +59,7 @@ module.exports = (env) => {
                 'process.env.FIREBASE_PROJECT_ID': JSON.stringify(process.env.FIREBASE_PROJECT_ID),
                 'process.env.FIREBASE_STORAGE_BUCKET': JSON.stringify(process.env.FIREBASE_STORAGE_BUCKET),
                 'process.env.FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER_ID),
+                'process.env.CONFIG_PATH': JSON.stringify(process.env.CONFIG_PATH)
             })
         ],
         devtool: isProduction ? 'source-map' : 'inline-source-map',
