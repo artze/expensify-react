@@ -47,6 +47,14 @@ module.exports = () => {
                             }
                         ]
                     })
+                },
+                {
+                    test: /\.(gif|jpe?g|png)$/,
+                    loader: 'file-loader',
+                    options: {
+                        outputPath: 'images',
+                        publicPath: '/dist/images'
+                    }
                 }
             ]
         },
@@ -67,6 +75,11 @@ module.exports = () => {
             contentBase: path.join(__dirname, 'public'),
             historyApiFallback: true,
             publicPath: '/dist/'
+        },
+        resolve: {
+            alias: {
+                'assets': path.resolve('./src/assets')
+            }
         }
     }
 };

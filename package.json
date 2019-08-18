@@ -54,6 +54,7 @@
     "webpack-dev-server": "^2.5.1"
   },
   "devDependencies": {
-    "dotenv": "^6.2.0"
+    "dotenv": "^6.2.0",
+    "file-loader": "^4.2.0"
   }
 }
